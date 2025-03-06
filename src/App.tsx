@@ -1,11 +1,12 @@
-const AppContent = () => {
-    return (
-        <div className='max-w-4xl mx-auto p-4'>
-            <h1 className='text-2xl font-bold text-center mb-4'>Dog Breeds</h1>
-        </div>
-    );
-};
+import { useRoutes } from "react-router-dom";
 
-const App = () => <AppContent />;
+import { ROUTES } from "./routes/routes";
+import { TrAppContextProvider } from "./lib/context/TrAppContext/TrAppContext.context";
+
+function App() {
+  const routes = useRoutes(ROUTES);
+
+  return <TrAppContextProvider>{routes}</TrAppContextProvider>;
+}
 
 export default App;
