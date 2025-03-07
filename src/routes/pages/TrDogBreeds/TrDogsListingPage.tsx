@@ -1,8 +1,8 @@
 import { Container, Stack, Typography, useTheme } from "@mui/material";
-import TrDogBreedsListing from "../../../lib/components/dog-breeds/TrDogListing";
-import { TrDogBreedsFilter } from "../../../lib/components/dog-breeds/TrDogBreedsFilter";
 import { useState } from "react";
-import TrFavoriteListing from "../../../lib/components/dog-breeds/TrFavoriteListing";
+import { TrDogBreedsFilter } from "../../../lib/components/dog-listing/TrDogBreedsFilter";
+import TrFavoriteListing from "../../../lib/components/dog-listing/TrFavoriteListing";
+import TrDogBreedsListing from "../../../lib/components/dog-listing/TrDogListing";
 
 export default function TrDogsListingPage() {
   const [selectedBreed, setSelectedBreed] = useState<string>("akita");
